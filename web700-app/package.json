@@ -1,11 +1,13 @@
 {
-  "name": "assignment4",
+  "name": "web700-app",
   "version": "1.0.0",
-  "description": "css assignment 4",
-  "main": "index.js",
+  "main": "server.js",
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "Padmapriya P",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
