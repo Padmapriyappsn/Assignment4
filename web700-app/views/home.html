@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+                window.history.back();
+            }
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">My Website</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/htmlDemo">HTML Demo</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/students/add">Add Student</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 style="text-align: center;font-family: 'Franklin Gothic Medium';font-size:xx-large;">Welcome to my website</h1>
+        <p style="text-align: center;font-size: medium;" >Welcome to my website, I will be demonstrating HTML5 principles and techniques, Routing in Express</p>
+        
+        <h2 style="text-align: center;font-family: 'Franklin Gothic Medium';">Website Overview</h2>
+        <p>This site consists of 3 static views (Home, About, HTML Demo) as well as 5 routes that supply data, including: 
+        <ul>
+            <li><a href="/students">All Students</a></li>
+            <li><a href="/students?course=3">Students by Course</a></li>
+            <li><a href="/student/2">A Single Student By Student Number</a></li>
+            <li><a href="/tas">All Managers</a></li>
+            <li><a href="/courses">All Courses</a></li>
+        </ul>
+        </p>
+        
+        <h2 style="text-align: center;font-family: 'Franklin Gothic Medium';font-size:xx-large;" >HTML 5 Introduction</h2>
+        <p style="text-align: center;" >This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web.</p>
+    </div>
+</body>
+</html>
