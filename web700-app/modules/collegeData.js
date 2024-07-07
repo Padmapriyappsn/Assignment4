@@ -18,14 +18,14 @@ module.exports.initialize = function () {
         console.log("Course Path: ", coursePath);  // Debugging log
         console.log("Student Path: ", studentPath);  // Debugging log
 
-        fs.readFile(coursePath, 'utf8', (err, courseData) => {
+        fs.readFile('./data/courses.json', 'utf8', (err, courseData) => {
             if (err) {
                 console.error("Failed to load courses:", err);
                 reject("unable to load courses");
                 return;
             }
 
-            fs.readFile(studentPath, 'utf8', (err, studentData) => {
+            fs.readFile('./data/students.json', 'utf8', (err, studentData) => {
                 if (err) {
                     console.error("Failed to load students:", err);
                     reject("unable to load students");
