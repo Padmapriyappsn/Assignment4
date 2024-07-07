@@ -55,13 +55,13 @@ app.get('/students', (req, res) => {
         collegeData.getStudentsByCourse(parseInt(req.query.course)).then((data) => {
             res.json(data);
         }).catch((err) => {
-            res.json({ message: "no results" });
+            res.json({ message: "no results for student" });
         });
     } else {
         collegeData.getAllStudents().then((data) => {
             res.json(data);
         }).catch((err) => {
-            res.json({ message: "no results" });
+            res.json({ message: "no results for students" });
         });
     }
 });
@@ -71,7 +71,7 @@ app.get('/tas', (req, res) => {
     collegeData.getTAs().then((data) => {
         res.json(data);
     }).catch((err) => {
-        res.json({ message: "no results" });
+        res.json({ message: "no results for managers" });
     });
 });
 // GET /courses route for Courses
@@ -79,7 +79,7 @@ app.get('/courses', (req, res) => {
     collegeData.getCourses().then((data) => {
         res.json(data);
     }).catch((err) => {
-        res.json({ message: "no results" });
+        res.json({ message: "no results for courses" });
     });
 });
 // GET /student/:num route for Student by student number
@@ -87,7 +87,7 @@ app.get('/student/:num', (req, res) => {
     collegeData.getStudentByNum(req.params.num).then((data) => {
         res.json(data);
     }).catch((err) => {
-        res.json({ message: "no results" });
+        res.json({ message: "no results for student" });
     });
 });
 
