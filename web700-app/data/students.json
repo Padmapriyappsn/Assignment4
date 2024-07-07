@@ -3130,5 +3130,17 @@
     "TA": true,
     "status": "Full Time",
     "enrolledCourse": 5
+  },
+  {
+    "studentNum": 262,
+    "firstName": "Raj",
+    "lastName": "Kaur",
+    "email": "raj.kaur@gmail.com",
+    "addressStreet": "Shershire",
+    "addressCity": "Brampton",
+    "addressProvince": "Ontario",
+    "TA": true,
+    "status": "Full Time",
+    "enrolledCourse": 2
   }
 ]
