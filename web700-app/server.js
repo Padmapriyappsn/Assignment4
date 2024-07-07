@@ -1,12 +1,4 @@
-/*********************************************************************************
-*  WEB700 – Assignment 03
-*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part 
-*  of this assignment has been copied manually or electronically from any other source 
-*  (including 3rd party web sites) or distributed to other students.
-* 
-*  Name:Rajbir Kaur Student ID: 151006236 Date: 15-06-2024
-*
-********************************************************************************/ 
+
 
 const HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
