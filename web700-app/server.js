@@ -16,9 +16,6 @@ var collegeData = require("./modules/collegeData");
 
 module.exports=app;
 
-// Configure body-parser middleware to parse URL-encoded bodies
-app.use(bodyParser.urlencoded({ extended: true }));
-
 // Middleware route to serve JSON files from the "data" folder
 app.use(express.static(path.join(__dirname, 'data')));
 
@@ -28,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'views')));
 // Middleware route to serve static files from the "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Configure body-parser middleware to parse URL-encoded bodies
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Setup routes to serve HTML files
 // GET / route for Home Page
