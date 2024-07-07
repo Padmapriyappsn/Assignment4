@@ -1,4 +1,3 @@
-
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
@@ -11,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/students/add', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'addStudent.html'));
+    res.sendFile(path.join(__dirname, './views', 'addStudent.html'));
 });
 
 app.post('/students/add', (req, res) => {
@@ -67,15 +66,15 @@ app.get('/student/num', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/home.html'));
+    res.sendFile(path.join(__dirname, './views/home.html'));
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/about.html'));
+    res.sendFile(path.join(__dirname, './views/about.html'));
 });
 
 app.get('/htmlDemo', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/htmlDemo.html'));
+    res.sendFile(path.join(__dirname, './views/htmlDemo.html'));
 });
 
 app.use((req, res) => {
