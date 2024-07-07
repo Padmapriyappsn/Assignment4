@@ -7,16 +7,19 @@ class Data{
     }
 }
 
+// Middleware route to serve JSON files from the "data" folder
+app.use(express.static(path.join(__dirname, 'data')));
+
 let dataCollection = null;
 //Initializting the student and courses data via json files
 module.exports.initialize = function () {
     return new Promise( (resolve, reject) => {
-        fs.readFile('./data/courses.json','utf8', (err, courseData) => {
+        fs.readFile('courses.json','utf8', (err, courseData) => {
             if (err) {
                 reject("unable to load courses"); return;
             }
 
-            fs.readFile('./data/students.json','utf8', (err, studentData) => {
+            fs.readFile('students.json','utf8', (err, studentData) => {
                 if (err) {
                     reject("unable to load students"); return;
                 }
