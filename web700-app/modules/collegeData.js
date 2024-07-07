@@ -1,3 +1,4 @@
+const path = require('path');
 const fs = require("fs");
 
 class Data{
@@ -10,17 +11,25 @@ class Data{
 let dataCollection = null;
 //Initializting the student and courses data via json files
 module.exports.initialize = function () {
-    return new Promise( (resolve, reject) => {
-        fs.readFile('./data/courses.json','utf8', (err, courseData) => {
+    return new Promise((resolve, reject) => {
+        const coursePath = path.join(__dirname, 'data', 'courses.json');
+        const studentPath = path.join(__dirname, 'data', 'students.json');
+
+        console.log("Course Path: ", coursePath);  // Debugging log
+        console.log("Student Path: ", studentPath);  // Debugging log
+
+        fs.readFile(coursePath, 'utf8', (err, courseData) => {
             if (err) {
                 console.error("Failed to load courses:", err);
-                reject("unable to load courses"); return;
+                reject("unable to load courses");
+                return;
             }
 
-            fs.readFile('./data/students.json','utf8', (err, studentData) => {
+            fs.readFile(studentPath, 'utf8', (err, studentData) => {
                 if (err) {
                     console.error("Failed to load students:", err);
-                    reject("unable to load students"); return;
+                    reject("unable to load students");
+                    return;
                 }
 
                 dataCollection = new Data(JSON.parse(studentData), JSON.parse(courseData));
@@ -29,7 +38,7 @@ module.exports.initialize = function () {
             });
         });
     });
-}
+};
 //Get all student data
 module.exports.getAllStudents = function(){
     return new Promise((resolve,reject)=>{
