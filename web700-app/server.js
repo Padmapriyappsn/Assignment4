@@ -14,7 +14,7 @@ var path = require("path");
 var bodyParser = require("body-parser"); // Import body-parser module
 var collegeData = require("./modules/collegeData");
 
-
+module.exports=app;
 
 // Configure body-parser middleware to parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
