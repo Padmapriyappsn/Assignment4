@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 const fs = require("fs");
 
 class Data{
@@ -12,9 +12,9 @@ let dataCollection = null;
 //Initializting the student and courses data via json files
 module.exports.initialize = function () {
     return new Promise((resolve, reject) => {
-        const coursePath = path.join(__dirname, 'data', 'courses.json');
-        const studentPath = path.join(__dirname, 'data', 'students.json');
-        
+        const coursePath = path.join(__dirname, '../data', 'courses.json');
+        const studentPath = path.join(__dirname, '../data', 'students.json');
+
         console.log("Course Path: ", coursePath);  // Debugging log
         console.log("Student Path: ", studentPath);  // Debugging log
 
