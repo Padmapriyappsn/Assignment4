@@ -118,7 +118,7 @@ module.exports.addStudent = function (student,courseId) {
         let newStudentNum =  dataCollection.students.length + 1;
 
         if (!courseId || student.TA== 'on') {
-            TAvalue = true
+            var TAvalue = true
         }
 
 
