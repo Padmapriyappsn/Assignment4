@@ -13,15 +13,18 @@ module.exports.initialize = function () {
     return new Promise( (resolve, reject) => {
         fs.readFile('./data/courses.json','utf8', (err, courseData) => {
             if (err) {
+                console.error("Failed to load courses:", err);
                 reject("unable to load courses"); return;
             }
 
             fs.readFile('./data/students.json','utf8', (err, studentData) => {
                 if (err) {
+                    console.error("Failed to load students:", err);
                     reject("unable to load students"); return;
                 }
 
                 dataCollection = new Data(JSON.parse(studentData), JSON.parse(courseData));
+                console.log("Data initialized successfully");
                 resolve();
             });
         });
@@ -31,7 +34,8 @@ module.exports.initialize = function () {
 module.exports.getAllStudents = function(){
     return new Promise((resolve,reject)=>{
         if (dataCollection.students.length == 0) {
-            reject("query returned 0 results"); return;
+            reject("query returned 0 results"); 
+            return;
         }
 
         resolve(dataCollection.students);
