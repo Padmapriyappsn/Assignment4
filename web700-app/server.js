@@ -7,11 +7,11 @@
 *  Name: Padmapriya PalaniSwamiNathan Student ID: 140193237 Date: 05-JUl-2024
 *
 ********************************************************************************/ 
-var HTTP_PORT = process.env.PORT || 8080;
-var express = require("express");
-var app = express();
+const HTTP_PORT = process.env.PORT || 8080;
+const express = require("express");
+const app = express();
 const path = require("path");
-var bodyParser = require("body-parser"); // Import body-parser module
+const bodyParser = require("body-parser"); // Import body-parser module
 const collegeData = require("./modules/collegeData");
 
 module.exports=app;
