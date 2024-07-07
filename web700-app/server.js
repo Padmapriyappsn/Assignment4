@@ -53,7 +53,7 @@ app.get('/students/add', function(req, res) {
 // GET /students route for Students
 app.get('/students', (req, res) => {
     if (req.query.course) {
-        collegeData.getStudentsByCourse(req.query.course).then((data) => {
+        collegeData.getStudentsByCourse(parseInt(req.query.course)).then((data) => {
             res.json(data);
         }).catch((err) => {
             res.json({ message: "no results" });
