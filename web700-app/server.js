@@ -19,6 +19,9 @@ module.exports=app;
 // Configure body-parser middleware to parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Middleware route to serve JSON files from the "data" folder
+app.use(express.static(path.join(__dirname, 'data')));
+
 // Middleware route to serve static files from the "views" folder
 app.use(express.static(path.join(__dirname, 'views')));
 
