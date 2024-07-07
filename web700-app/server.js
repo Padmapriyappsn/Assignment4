@@ -56,7 +56,7 @@ app.get('/students', (req, res) => {
         collegeData.getStudentsByCourse(parseInt(req.query.course)).then((data) => {
             res.json(data);
         }).catch((err) => {
-            res.json({ message: "no results" });
+            res.json({ message: "Student data not able to retrieve" });
         });
     } else {
         collegeData.getAllStudents().then((data) => {
