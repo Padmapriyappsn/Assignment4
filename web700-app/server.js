@@ -14,10 +14,10 @@ var path = require("path");
 var bodyParser = require("body-parser"); // Import body-parser module
 var collegeData = require("./modules/collegeData");
 
-//module.exports=app;
+module.exports=app;
 
 // Middleware route to serve JSON files from the "data" folder
-//app.use(express.static(path.join(__dirname, 'data')));
+app.use(express.static(path.join(__dirname, 'data')));
 
 // Middleware route to serve static files from the "views" folder
 app.use(express.static(path.join(__dirname, 'views')));
