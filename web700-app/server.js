@@ -10,9 +10,9 @@
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
-var path = require("path");
+const path = require("path");
 var bodyParser = require("body-parser"); // Import body-parser module
-var collegeData = require("./modules/collegeData");
+const collegeData = require("./modules/collegeData");
 
 module.exports=app;
 
@@ -27,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure body-parser middleware to parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.urlencoded({ extended: true }));
 
 // Setup routes to serve HTML files
 // GET / route for Home Page
