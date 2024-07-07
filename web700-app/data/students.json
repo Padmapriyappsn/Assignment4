@@ -3118,5 +3118,17 @@
     "TA": false,
     "status": "Part Time",
     "course": 5
+  },
+  {
+    "studentNum": 261,
+    "firstName": "PADMAPRIYA",
+    "lastName": "PALANISWAMINATHAN",
+    "email": "padmapriya.ppsn@gmail.com",
+    "addressStreet": "21 Trinco Way",
+    "addressCity": "Markham",
+    "addressProvince": "Ontario",
+    "TA": true,
+    "status": "Full Time",
+    "enrolledCourse": 5
   }
 ]
